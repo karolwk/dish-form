@@ -6,6 +6,7 @@ import {
   Typography,
   Snackbar,
   Alert,
+  CircularProgress,
 } from '@mui/material';
 
 import { Form, Field } from 'react-final-form';
@@ -29,7 +30,6 @@ import { useState } from 'react';
 const MainForm = () => {
   const [openSnackBar, setOpenSnackBar] = useState(false);
   const [errMsg, setErrMsg] = useState('');
-
   const dishTypes = ['pizza', 'soup', 'sandwich'];
 
   const handleClose = (
@@ -210,7 +210,7 @@ const MainForm = () => {
                     type="submit"
                     disabled={submitting || pristine}
                   >
-                    Submit
+                    {!submitting ? 'Submit' : <CircularProgress size={25} />}
                   </Button>
                 </Grid>
               </Grid>

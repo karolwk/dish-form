@@ -33,9 +33,10 @@ Data should be submitted via POST request as a JSON to server and the form shoul
 
 ### Installation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Node version: 16.13.0
-NPM version: 8.1.0
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
+
+Node version: **16.13.0**
+NPM version: **8.1.0**
 
 Simply clone repository and then in the project directory, you can run:
 

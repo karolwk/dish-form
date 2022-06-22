@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/dish-form/static/js/main.55674ce8.js",
+    "main.js": "/dish-form/static/js/main.99597761.js",
     "index.html": "/dish-form/index.html",
-    "main.55674ce8.js.map": "/dish-form/static/js/main.55674ce8.js.map"
+    "main.99597761.js.map": "/dish-form/static/js/main.99597761.js.map"
   },
   "entrypoints": [
-    "static/js/main.55674ce8.js"
+    "static/js/main.99597761.js"
   ]
 }

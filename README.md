@@ -53,7 +53,7 @@ You will also see any lint errors in the console.
 
 ### Links
 
-- Live Site URL: [https://karolwk.github.io/dish-form](https://karolwk.github.io/dish-form/)
+- Live Site URL: [https://karolwk.github.io/dish-form/](https://karolwk.github.io/dish-form/)
 
 ### Built with
 

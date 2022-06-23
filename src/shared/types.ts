@@ -9,5 +9,5 @@ export interface FormValues {
 export enum DishTypes {
   PIZZA = 'pizza',
   SANDWICH = 'sandwich',
-  SOUP = 'SOUP',
+  SOUP = 'soup',
 }

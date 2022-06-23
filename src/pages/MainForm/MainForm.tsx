@@ -130,9 +130,9 @@ const MainForm = () => {
                     label="Choose dish type"
                     sx={{ maxWidth: '400px' }}
                     children={(
-                      Object.values(DishTypes) as Array<keyof typeof DishTypes>
+                      Object.keys(DishTypes) as Array<keyof typeof DishTypes>
                     ).map((itemName) => (
-                      <MenuItem key={itemName} value={itemName}>
+                      <MenuItem key={itemName} value={itemName.toLowerCase()}>
                         {itemName.toLowerCase()}
                       </MenuItem>
                     ))}

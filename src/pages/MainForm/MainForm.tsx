@@ -16,7 +16,7 @@ import {
   Condition,
   SliderAdapter,
 } from '../../components/forms';
-import { FormValues } from '../../shared/types';
+import { FormValues, DishTypes } from '../../shared/types';
 import { FormApi } from 'final-form';
 import {
   normalizeToInt,
@@ -30,7 +30,6 @@ import { useState } from 'react';
 const MainForm = () => {
   const [openSnackBar, setOpenSnackBar] = useState(false);
   const [errMsg, setErrMsg] = useState('');
-  const dishTypes = ['pizza', 'soup', 'sandwich'];
 
   const handleClose = (
     event?: React.SyntheticEvent | Event,
@@ -130,14 +129,16 @@ const MainForm = () => {
                     component={SelectFieldAdapter}
                     label="Choose dish type"
                     sx={{ maxWidth: '400px' }}
-                    children={dishTypes.map((itemName) => (
+                    children={(
+                      Object.values(DishTypes) as Array<keyof typeof DishTypes>
+                    ).map((itemName) => (
                       <MenuItem key={itemName} value={itemName}>
-                        {itemName}
+                        {itemName.toLowerCase()}
                       </MenuItem>
                     ))}
                   />
                 </Grid>
-                <Condition when="type" is="pizza">
+                <Condition when="type" is={DishTypes.PIZZA}>
                   <>
                     <Grid item xs={12}>
                       <Field
@@ -159,7 +160,7 @@ const MainForm = () => {
                     </Grid>
                   </>
                 </Condition>
-                <Condition when="type" is="soup">
+                <Condition when="type" is={DishTypes.SOUP}>
                   <Grid item xs={12}>
                     <Typography id="input-slider" gutterBottom>
                       Spiceness scale
@@ -178,7 +179,7 @@ const MainForm = () => {
                     />
                   </Grid>
                 </Condition>
-                <Condition when="type" is="sandwich">
+                <Condition when="type" is={DishTypes.SANDWICH}>
                   <>
                     <Grid item xs={12}>
                       <Field

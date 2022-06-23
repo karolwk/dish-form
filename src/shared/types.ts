@@ -6,3 +6,8 @@ export interface FormValues {
   slices_of_bread?: number | string;
   diameter?: number | string;
 }
+export enum DishTypes {
+  PIZZA = 'pizza',
+  SANDWICH = 'sandwich',
+  SOUP = 'SOUP',
+}

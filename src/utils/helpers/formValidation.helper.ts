@@ -19,7 +19,7 @@ const validateForm = (values: FormValues) => {
     if (!values.diameter) {
       errors.diameter = REQUIRED_FIELD;
     }
-  } else if (values.type === 'sandwitch') {
+  } else if (values.type === 'sandwich') {
     if (!values.slices_of_bread) errors.slices_of_bread = REQUIRED_FIELD;
   }
   if (values.preparation_time) {
